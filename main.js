@@ -19,7 +19,10 @@ function ex(prog) {
 		print(ary[indx])
 	}
 	if (i==","){
-		ary[indx] = prompt()
+		var inp = prompt()
+		if (inp == null){inp=0}
+		
+		ary[indx] = Number(inp%255)
 	}
 	if (i==">"){
 		indx+=1
